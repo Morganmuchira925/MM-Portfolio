@@ -15,9 +15,9 @@ export const Home = () => {
       <StarBackground />
 
       {/* Fixed position elements */}
-      <div className="fixed top-4 right-4 z-50">
+      {/* <div className="fixed top-4 right-4 z-50">
         <ThemeToggle />
-      </div>
+      </div> */}
       
       {/* Navbar */}
       <Navbar />

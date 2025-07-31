@@ -35,10 +35,10 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="blob:https://app.flowcv.com/bd58193b-377b-456f-afee-2001bd22d5e0"
+                href="https://flowcv.com/resume/idl3es7hgdb3"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
-                Download CV
+                View CV
               </a>
             </div>
           </div>
