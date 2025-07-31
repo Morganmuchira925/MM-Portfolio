@@ -22,13 +22,13 @@ const projects = [
   },
   {
     id: 3,
-    title: "Expense Tracker",
+    title: "Digital Support Toolkit",
     description:
-      "Track your Expenses as you interact with charts and respoinsive UI.",
-    image: "/projects/project3.png",
-    tags: ["React", "Express.js", "MongoDB", "TailwindCSS","Node.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "Get information on solving basic computer issues.",
+    image: "IT-Support.jpg",
+    tags: ["HTML","CSS", "Javascript"],
+    demoUrl: "https://morganmuchira925.github.io/Digital-Support-Toolkit/",
+    githubUrl: "https://github.com/Morganmuchira925/Digital-Support-Toolkit.git",
   },
 ];
 

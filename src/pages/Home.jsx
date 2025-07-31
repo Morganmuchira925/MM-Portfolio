@@ -10,14 +10,18 @@ import { Footer } from "../components/Footer";
 
 export const Home = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Theme Toggle */}
-      <ThemeToggle />
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
       {/* Background Effects */}
       <StarBackground />
 
+      {/* Fixed position elements */}
+      <div className="fixed top-4 right-4 z-50">
+        <ThemeToggle />
+      </div>
+      
       {/* Navbar */}
       <Navbar />
+      
       {/* Main Content */}
       <main>
         <HeroSection />

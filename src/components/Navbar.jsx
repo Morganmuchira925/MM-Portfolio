@@ -76,18 +76,8 @@ export const Navbar = () => {
             <span className="text-glow text-foreground">Morgan's</span> Portfolio
           </a>
 
-          {/* Desktop Nav - Always shows theme toggle */}
-          <div className="hidden md:flex items-center space-x-6">
-            {navItems.map((item, key) => (
-              <a
-                key={key}
-                href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium py-2 px-3"
-                onClick={handleNavItemClick}
-              >
-                {item.name}
-              </a>
-            ))}
+          <div className="flex items-center space-x-4">
+            {/* Theme Toggle - Always visible */}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-foreground/10 transition-colors duration-300 focus:outline-none"
@@ -99,20 +89,34 @@ export const Navbar = () => {
                 <Moon className="h-5 w-5 text-slate-600" />
               )}
             </button>
-          </div>
 
-          {/* Mobile Hamburger Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-foreground relative z-50 hover:bg-foreground/10 rounded-lg transition-colors"
-            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {/* Desktop Nav */}
+            <div className="hidden md:flex items-center space-x-6">
+              {navItems.map((item, key) => (
+                <a
+                  key={key}
+                  href={item.href}
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium py-2 px-3"
+                  onClick={handleNavItemClick}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 text-foreground relative z-50 hover:bg-foreground/10 rounded-lg transition-colors"
+              aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay (without theme toggle) */}
       <div
         className={cn(
           "fixed inset-0 bg-background/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center",
@@ -133,17 +137,6 @@ export const Navbar = () => {
               {item.name}
             </a>
           ))}
-          <button
-            onClick={toggleTheme}
-            className="mt-4 p-3 rounded-full hover:bg-foreground/10 transition-colors duration-300"
-            aria-label="Toggle theme"
-          >
-            {isDarkMode ? (
-              <Sun className="h-6 w-6 text-yellow-400" />
-            ) : (
-              <Moon className="h-6 w-6 text-slate-600" />
-            )}
-          </button>
         </div>
       </div>
     </>
